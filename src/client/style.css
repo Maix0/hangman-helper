@@ -1,15 +1,17 @@
-.helper{
+.helper {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     padding: 0
 }
+
 .hidden {
     height: 0px;
     width: 0px;
     opacity: 0;
+    z-index: -1;
 }
 
 
@@ -17,12 +19,56 @@ html {
     height: 100%;
     width: 100%;
 }
+
 .letter {
     width: 10px;
     border-width: 0px;
     background-color: blue;
-    border-left-width: 2px
+    border-left-width: 2px;
+    color:red
 }
+
 .word {
     padding: 10px
+}
+
+
+
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-template-rows: 0.25fr 1.5fr;
+    grid-template-areas: "wordSubmit wordSubmit wordSubmit""wrong best-letters word-proposition";
+}
+
+.wrong {
+    display: grid;
+    grid-template-columns: 0.9fr;
+    grid-template-rows: 0.3fr 1.7fr;
+    grid-template-areas: "wrong-submit""wrong-list";
+    grid-area: wrong;
+}
+
+.wrong-submit {
+    grid-area: wrong-submit;
+}
+
+.wrong-list {
+    grid-area: wrong-list;
+}
+
+.best-letters {
+    grid-area: best-letters;
+}
+
+.word-proposition {
+    grid-area: word-proposition;
+}
+
+.wordSubmit {
+    grid-area: wordSubmit;
 }

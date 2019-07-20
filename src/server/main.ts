@@ -58,6 +58,8 @@ server.get("/:lang/:request/:wrong", async function (req: express.Request, res: 
 server.get("/", function (req:express.Request,res:express.Response) {
     res.sendFile( "index.html", {root: "./dist/client/"})
 })
+
+
 server.get("/:file",function (req:express.Request,res:express.Response) {
     if(!fs.readdirSync("./dist/client/").includes(req.params.file)) return res.sendStatus(404).end()
     res.sendFile( req.params.file, {root: "./dist/client/"})

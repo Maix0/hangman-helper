@@ -12,13 +12,19 @@
         <input type="number" name="Value" id="maxLenght" placeholder="Word Lenght" min="1" max="999">
         <button id="createHelper">Create Helper</button>
     </div>
-
-    <div class="helper hidden">
-        <span class="word"></span> <button class="submitLetters">Submit</button>
-        <div class="addWrong"><input type="text" class="wrong" maxlength="1"></div> <button class="wrongAddBtn">Add Wrong letter</button>
-        <div class="wrongLetter"></div>
-        <div class="bestLetters"></div>
-        <div class="wordList"></div>
+    <div class="grid-container helper hidden">
+        <div class="wrong">
+            <div class="wrong-submit">
+                <input type="text" placeholder="wrong letter" maxlength="1" class="wrongInp">
+                <button class="wrongBtn">Add Wrong letter</button>
+            </div>
+            <div class="wrong-list"></div>
+        </div>
+        <div class="wordSubmit">
+            <span class="word"></span> <button class="submitLetters">Submit</button>
+        </div>
+        <div class="best-letters"></div>
+        <div class="word-proposition"></div>
     </div>
 </body>
 
